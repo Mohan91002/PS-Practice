@@ -1,0 +1,40 @@
+{
+       "data":[
+              {
+                     "firstName": "Sachin",
+                     "lastName": "Tendulkar",
+                     "departmentName": "Sales",
+                     "gender":"Male",
+                     "email":"sachin@gmail.com",
+                     "phoneNo":"9988776655",
+                     "departmentId": "1"
+              },
+              {
+                     "firstName": "Rahul",
+                     "lastName": "Dravid",
+                     "departmentName": "Marketing",
+                     "gender":"Male",
+                     "email":"rahul@gmail.com",
+                     "phoneNo":"9978776655",
+                     "departmentId": "2"
+              },
+              {
+                     "firstName": "Mahendra Singh",
+                     "lastName": "Dhoni",
+                     "departmentName": "RnD",
+                     "gender":"Male",
+                     "email":"dhoni@gmail.com",
+                     "phoneNo":"9988776654",
+                     "departmentId": "3"
+              },
+              {
+                     "firstName": "Rohit",
+                     "lastName": "Sharma",
+                     "departmentName": "Admin",
+                     "gender":"Male",
+                     "email":"rohit@gmail.com",
+                     "phoneNo":"9988776653",
+                     "departmentId": "4"
+              }
+       ]
+}
