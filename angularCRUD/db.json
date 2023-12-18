@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "firstName": "Sai Siva Prameela",
+      "lastName": "Pushpa",
+      "emailID": "prami132@gmail.com",
+      "mobileNo": "8520933400",
+      "salary": "$ 123"
+    },
+    {
+      "id": 2,
+      "firstName": "Sai Siva Prameela",
+      "lastName": "Pushpa",
+      "emailID": "prami132@gmail.com",
+      "mobileNo": "8520933400",
+      "salary": "$ 123"
+    },
+    {
+      "id": 3,
+      "firstName": "Sai Siva Prameela",
+      "lastName": "Pushpa",
+      "emailID": "prami132@gmail.com",
+      "mobileNo": "8520933400",
+      "salary": "$ 123"
+    }
+  ]
+}
