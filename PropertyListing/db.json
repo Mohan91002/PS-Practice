@@ -1,0 +1,20 @@
+{
+       "properties": [
+              {
+                     "id": 1,
+                     "pTitle": "Ashish Properties",
+                     "pPrice": "98522.00",
+                     "pLocation":"Uttar Pradesh",
+                     "pDetails": "Plot Available"
+              }
+       ],
+       "signup": [
+              {
+                     "id": 1,
+                     "name": "Ashish Mishra",
+                     "email": "ashish@gmail.com",
+                     "mobile": "9898989898",
+                     "password":"ashish@12345"
+              }
+       ]
+}
