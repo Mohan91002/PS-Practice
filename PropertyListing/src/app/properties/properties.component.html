@@ -1,134 +1,129 @@
 <nav class="navbar navbar-light bg-primary">
 
-       <div class="container-fluid">
+  <div class="container-fluid">
 
-              <h2 style="color: white;">
+    <h2 style="color: white;">
 
-                     TC Properties
+      TC Properties
 
-              </h2>
+    </h2>
 
-              <div class="d-flex">
+    <div class="d-flex">
 
-                     <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Listing</button>
-                     <button class="btn btn-danger mx-3">Logout</button>
+      <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="clickAddProperty()">Add Listing</button>
+      <button class="btn btn-danger mx-3" routerLink="/login">Logout</button>
 
-              </div>
+    </div>
 
-       </div>
+  </div>
 
 </nav>
 
 <div class="p-5 mb-4 bg-light rounded-3">
 
-       <div class="container-fluid py-3">
+  <div class="container-fluid py-3">
 
-              <h1 class="display-5 fw-bold">Leo Properties</h1>
-              <p class="col-mb-8 fs-4">You can Add Property data here free</p>
-              <a href="https://www.youtube.com/@Testycodeiz" class="btn btn-primary" target="_blank">Code</a>
+    <h1 class="display-5 fw-bold">Leo Properties</h1>
+    <p class="col-mb-8 fs-4">You can Add Property data here free</p>
+    <a href="https://www.youtube.com/@Testycodeiz" class="btn btn-primary" target="_blank" type="button">Code</a>
 
-       </div>
+  </div>
 
 </div>
 
 <table class="table">
 
-       <thead>
+  <thead>
 
-              <tr>
-                     <th scope="col">#</th>
-                     <th scope="col">Property Title</th>
-                     <th scope="col">Property Price</th>
-                     <th scope="col">Property Location</th>
-                     <th scope="col">Property Details</th>
-                     <th scope="col">Action</th>
-              </tr>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Property Title</th>
+      <th scope="col">Property Price</th>
+      <th scope="col">Property Location</th>
+      <th scope="col">Property Details</th>
+      <th scope="col">Action</th>
+    </tr>
 
-       </thead>
+  </thead>
 
-       <tbody>
+  <tbody>
 
-              <tr>
-                     <th scope="row">1</th>
-                     <td>Dummy Data</td>
-                     <td>Dummy Data</td>
-                     <td>Dummy Data</td>
-                     <td>Dummy Data</td>
-                     <td>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
-                            <button class="btn btn-danger mx-2">Delete</button>
-                            <button class="btn btn-success mx-2">View</button>
-                     </td>
-              </tr>
+    <tr *ngFor="let data of allProperty">
+      <td>{{data.id}}</td>
+      <td>{{data.pTitle}}</td>
+      <td>{{data.pPrice}}</td>
+      <td>{{data.pLocation}}</td>
+      <td>{{data.pDetails}}</td>
+      <td>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+        <button class="btn btn-danger mx-2">Delete</button>
+        <button class="btn btn-success mx-2" (click)="deleteProperty(data)">View</button>
+      </td>
+    </tr>
 
-       </tbody>
+  </tbody>
 
 </table>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
-       <div class="modal-dialog">
+  <div class="modal-dialog">
 
-              <div class="modal-content">
+    <div class="modal-content">
 
-                     <div class="modal-header">
+      <div class="modal-header">
 
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Property Records Form</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Property Records Form</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 
-                     </div>
+      </div>
 
-                     <div class="modal-body">
+      <div class="modal-body">
 
-                            <form action="">
+        <form formGroup='formValue'>
 
+          <div class="mb-3">
 
-                                   <div class="mb-3">
+            <label for="propertyTitle" class="form-label">Property Title</label>
+            <input formControlName="pName" type="text" class="form-control" id="propertyTitle" placeholder="Property Name"/>
 
-                                          <label for="propertyTitle" class="form-label">Property Title</label>
-                                          <input type="text" class="form-control" id="propertyTitle"
-                                                 placeholder="Property Name">
+          </div>
 
-                                   </div>
+          <div class="mb-3">
 
-                                   <div class="mb-3">
+            <label for="propertyPrice" class="form-label">Property Price</label>
+            <input formControlName="pPrice" type="text" class="form-control" id="propertyPrice" placeholder="99.00">
 
-                                          <label for="propertyPrice" class="form-label">Property Price</label>
-                                          <input type="text" class="form-control" id="propertyPrice"
-                                                 placeholder="99.00">
+          </div>
 
-                                   </div>
+          <div class="mb-3">
 
-                                   <div class="mb-3">
+            <label for="propertyLocation" class="form-label">Property Location</label>
+            <input formControlName="pLocation" type="text" class="form-control" id="propertyLocation" placeholder="Andhra Pradesh">
 
-                                          <label for="propertyLocation" class="form-label">Property Location</label>
-                                          <input type="text" class="form-control" id="propertyLocation"
-                                                 placeholder="Andhra Pradesh">
+          </div>
 
-                                   </div>
+          <div class="mb-3">
 
-                                   <div class="mb-3">
+            <label for="propertyDetails" class="form-label">Property Details</label>
+            <input formControlName="pDetails" type="text" class="form-control" id="propertyDetails" placeholder="2BHK">
 
-                                          <label for="propertyDetails" class="form-label">Property Details</label>
-                                          <input type="text" class="form-control" id="propertyDetails"
-                                                 placeholder="2BHK">
+          </div>
 
-                                   </div>
+        </form>
 
-                            </form>
+      </div>
 
-                     </div>
+      <div class="modal-footer">
 
-                     <div class="modal-footer">
+        <button type="button" id="clear" class="btn btn-secondary" data-bs-dismiss="modal">Clear</button>
+        <button *ngIf="showAdd" type="button" class="btn btn-primary" (click)="addProp()">Add Listing</button>
+        <button *ngIf="showEdit" type="button" class="btn btn-warning">Update Details</button>
 
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Add Listing</button>
-                            <button type="button" class="btn btn-warning">Update Details</button>
+      </div>
 
-                     </div>
+    </div>
 
-              </div>
-
-       </div>
+  </div>
 
 </div>

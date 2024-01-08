@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "axe/forms": "off",
+    "button-type": "off",
+    "no-inline-styles": "off",
+    "axe/aria": [
+      "default",
+      {
+        "aria-allowed-attr": "off"
+      }
+    ]
+  }
+}

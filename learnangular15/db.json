@@ -1,0 +1,23 @@
+{
+  "user": [
+    {
+      "id": "admin",
+      "name": "Admin User",
+      "password": "May@1071995",
+      "email": "SatyavarapuMohan.MohanKumar@LTIMindtree.com",
+      "gender": "male",
+      "role": "admin",
+      "isactive": true
+    }
+  ],
+  "role": [
+    {
+      "code": "staff",
+      "name": "staff"
+    },
+    {
+      "code": "quality",
+      "name": "quality"
+    }
+  ]
+}
